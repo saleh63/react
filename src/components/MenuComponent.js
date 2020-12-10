@@ -5,11 +5,16 @@ import {Card, CardTitle, CardBody, CardImg, CardImgOverlay, CardText} from "reac
 class Menu extends Component{
     constructor(props) {
         super(props);
+        console.log("Menu component constructor called");
         this.state = {
             dishes: props.dishes,
             selectedDish : null
 
         };
+    }
+
+    componentDidMount() {
+        console.log("Menu component componentDidMount called");
     }
 
     onDishSelect(dish){
@@ -53,6 +58,7 @@ class Menu extends Component{
                 )
             }
         );
+        console.log("Menu component render called");
         return (
             <div className="container">
                 <div className="row">
