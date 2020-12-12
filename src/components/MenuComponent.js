@@ -18,8 +18,11 @@ class Menu extends Component{
     }
 
     onDishSelect(dish){
-        this.setState({
+        console.log("dish", dish);
+        this.setState(state =>({
             selectedDish : dish
+        }),() => {
+            console.log("onDishSelect", this.state);
         });
 
     }
@@ -39,7 +42,7 @@ class Menu extends Component{
                 )
             }
         );
-        console.log("Menu component render called");
+        console.log("Menu component render called", this.state);
         return (
             <div className="container">
                 <div className="row">
